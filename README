@@ -1,0 +1,17 @@
+set up CMSSW_7_4_15
+git clone https://github.com/cms-ttH/CommonClassifier.git
+
+For now:
+git clone https://github.com/kit-cn-cms/TTH.git
+
+-> both packages should end up in $CMSSW_BASE/src/TTH/
+
+scram b 
+
+You now have an executable in $CMSSW_BASE/test/*/standaloneClassifier
+
+Use $CMSSW_BASE/src/StandaloneClassifierEvaluation/Classifier/test/sendJobs.py with:
+- our NTuple trees as input 
+- an output directory
+
+Will write BDT in/outputs & MEM outputs to new Trees
