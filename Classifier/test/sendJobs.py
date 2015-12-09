@@ -68,7 +68,7 @@ for job in listOfInputTrees:
       joblines.append("export OUTFILENAME="+outdir+"/"+outfname+"\n")
       joblines.append("export BEGINEVENT="+str(beginEvt)+"\n")
       joblines.append("export ENDEVENT="+str(endEvt)+"\n")
-      joblines.append(cmsswPath+"/test/slc6_amd64_gcc491/mytest11\n") 
+      joblines.append(cmsswPath+"/test/slc6_amd64_gcc491/standaloneClassifier\n") 
       outfile=open("jobScripts/"+jobname+".sh","w")
       for line in joblines:
         outfile.write(line)

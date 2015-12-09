@@ -1,4 +1,4 @@
-#include "TTH/StandaloneBDT/interface/BDTClassifier.h"
+#include "TTH/CommonClassifier/interface/BDTClassifier.h"
 #include "TTH/CommonClassifier/interface/MEMClassifier.h"
 #include <cstdlib>
 #include <iostream>
@@ -150,7 +150,7 @@ Evaluater::Evaluater(const TString infileName, const TString outfileName){
   outTree->Branch("Weight",&weight,"Weight/F");
   outTree->Branch("Evt_ID",&evtID,"Evt_ID/F");
 
-  BDT = new BDTClassifier("/nfs/dust/cms/user/kelmorab/CMSSW_7_4_15/src/TTH/StandaloneBDT/data/bdtweights_v5");
+  BDT = new BDTClassifier("/nfs/dust/cms/user/kelmorab/CMSSW_7_4_15/src/TTH/CommonClassifier/data/bdtweights_v5");
   MEM = new MEMClassifier();
 
 //   std::cout<<"constructor done"<<std::endl;
