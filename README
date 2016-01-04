@@ -1,12 +1,7 @@
 set up CMSSW_7_4_15
+cd $CMSSW_BASE/src/
 git clone https://github.com/cms-ttH/CommonClassifier.git
 and setup up MEM part with https://github.com/cms-ttH/CommonClassifier/blob/master/setup/install_mem.sh
-!!! But care type on line 9 !!!
-
-For now:
-git clone https://github.com/kit-cn-cms/TTH.git
-
--> both packages should end up in $CMSSW_BASE/src/TTH/
 
 scram b 
 
@@ -19,6 +14,6 @@ Use $CMSSW_BASE/src/StandaloneClassifierEvaluation/Classifier/test/sendJobs.py w
 Will write BDT in/outputs & MEM outputs to new Trees
 
 Possible bug:
-I experiences problems with the MEM code not able to open needed files.
+I experienced problems with the MEM code not being able to open some needed files.
 To fix copy https://github.com/cms-ttH/CommonClassifier/tree/master/root to different location 
 and change https://github.com/cms-ttH/CommonClassifier/blob/master/src/MEMClassifier.cc accordingly.
