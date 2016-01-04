@@ -2,5 +2,4 @@
 <use   name="root"/>
 <use   name="TTH/CommonClassifier"/>
 <use   name="TTH/MEIntegratorStandalone"/>
-<use   name="TTH/StandaloneBDT"/>
 </bin>
